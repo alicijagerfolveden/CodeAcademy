@@ -1,0 +1,55 @@
+.flexbox-container {
+    display: flex;
+    justify-content: space-around;
+    height: 250px;
+}
+
+.flexbox-container :first-child {
+    flex: 4;
+}
+
+.flexbox-container :last-child {
+    flex: 4;
+}
+
+.flexbox-container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox-container3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexbox-item {
+    background-color: rgb(252, 57, 57);
+    margin: 5px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+.grid-container div {
+    background-color: cyan;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.grid-item1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 250px;
+}
+
+.grid-item2 {
+    grid-column: span 2;
+}

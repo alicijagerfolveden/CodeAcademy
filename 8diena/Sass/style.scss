@@ -1,0 +1,25 @@
+$main-color: red;
+
+.box {
+    background-color: $main-color;
+    width: 300px;
+    height: 600px;
+
+    .child {
+        height: 20px;
+        width: 60px;
+        background-color: $main-color;
+        border: 10px solid green;
+    }
+
+}
+
+@mixin theme($color: Red) {
+    background-color: $color;
+    box-shadow: 0 0 1px $color;
+    color: white;
+}
+
+.stylist {
+    @include theme($color: Black);
+}

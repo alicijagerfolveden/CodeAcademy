@@ -1,0 +1,40 @@
+.grid-container {
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    height: 150px;
+    width: 100px;
+    background-color: pink;
+    margin: 0 auto;
+}
+
+.grid-row-container {
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-row-container .grid-item {
+    background-color: green;
+}
+
+.grid-container1 {
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-item1 {
+    height: 300px;
+    width: 150px;
+    border: 2px solid red;
+}
+
+@media (max-width: 720px) {
+    .grid-container1 {
+        grid-template-columns: auto auto;
+    }
+
+    .grid.item1 {}
+}

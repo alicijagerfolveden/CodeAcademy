@@ -1,3 +1,68 @@
 .flexbox {
-    display: inline;
+    background-color: rgb(165, 214, 73);
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    height: 100px;
+    border-top: 1px solid black;
+}
+
+img {
+    width: 150px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.flexbox2 {
+    display: flex;
+    text-align: justify;
+    background-color: white;
+}
+
+.flexbox2 div {
+    margin: 10px;
+}
+
+body {
+    background-color: bisque;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+div img {
+    max-width: 250px;
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+article div:first-child {
+    flex: 1;
+}
+
+article div:last-child {
+    flex: 2;
+}
+
+div>button {
+    border-radius: 1px;
+    background-color: rgb(165, 214, 73);
+    border-color: white;
+}
+
+button:hover {
+    background-color: green;
+    text-decoration: underline;
 }

@@ -1,0 +1,17 @@
+.box {
+  background-color: red;
+  width: 300px;
+  height: 600px;
+}
+.box .child {
+  height: 20px;
+  width: 60px;
+  background-color: red;
+  border: 10px solid green;
+}
+
+.stylist {
+  background-color: Black;
+  box-shadow: 0 0 1px Black;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

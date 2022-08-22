@@ -1,0 +1,23 @@
+body {
+    background-color: purple;
+    text-align: center;
+    border-style: dotted;
+    border-color: yellow;
+    margin: 150px;
+    margin-top: 20px;
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    width: 30%;
+    border-top-style: solid;
+    border-top: 15px;
+    border-top-color: antiquewhite;
+    border-width: 15px;
+    margin-bottom: 20px;
+}
+
+#product {}

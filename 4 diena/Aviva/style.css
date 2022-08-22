@@ -1,0 +1,106 @@
+header {
+    background-color: black;
+    color: white;
+}
+
+header p {
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+}
+
+header h1 {
+    margin: 20px 50px;
+}
+
+header nav {
+    text-align: right;
+    background-color: rgba(255, 202, 56, 0.815);
+    margin: 0 50px;
+    padding: 15px;
+}
+
+header nav a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+article {
+    margin: 10px 50px;
+    text-align: justify;
+}
+
+article nav {
+    text-align: center;
+}
+
+article nav a {
+    background-color: red;
+    padding: 5px 30px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+div {
+    margin: 0 50px;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+th,
+td {
+    border: 2px solid red;
+}
+
+td:nth-child(2n),
+tfoot td {
+    font-weight: bold;
+    text-align: right;
+}
+
+tbody td:nth-child(2n+1) {
+    text-align: center;
+}
+
+section {
+    background-color: rgb(13, 13, 71);
+    padding: 20px;
+
+}
+
+table thead tr th {
+    padding: 0;
+}
+
+table tbody td {
+    padding: 5px;
+}
+
+table tfoot td {
+    padding: 10px;
+}
+
+footer section {
+    background-color: rgba(255, 202, 56, 0.815);
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer h2,
+ul {
+    margin: 10px 50px;
+}
+
+footer nav {
+    text-align: center;
+}
