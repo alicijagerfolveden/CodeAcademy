@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+:root {
+    --main-color: rgb(99, 99, 253);
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+header a {
+    padding: 5px;
+}
+
+header a img {
+    width: 20px;
+}
+
+.big-h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.nav-links {
+    height: 0;
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .nav-links {
+        height: auto;
+        display: flex;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        padding: 10px;
+    }
+
+    .nav-links a:hover {
+        color: var(--main-color);
+    }
+}
+
+
+/*CONTINUE EXPLORING*/
+main {
+    background-color: var(--main-color);
+    margin: 0;
+    color: white;
+    padding: 100px 20px;
+}
+
+main button {
+    background-color: var(--main-color);
+    box-shadow: 1px 1px 5px rgb(74, 74, 207);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    margin-top: 20px;
+    border-color: var(--main-color);
+
+}
+
+main button:hover {
+    background-color: rgb(74, 74, 207);
+    transition-duration: 0.4s;
+}
+
+/*ABOUT US*/
+.about-us {
+    text-align: center;
+}
+
+.about-us img {
+    width: 80%;
+}
+
+.about-us article {
+    text-align: justify;
+    margin: 10%;
+}
+
+.a-nav {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.big-h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .about-us-flex {
+        display: flex;
+    }
+
+    .about-us img {
+        width: 500px;
+        height: 300px;
+        margin: auto;
+        margin-left: 30px;
+    }
+}
+
+
+/*OUR SERVICES*/
+.our-services {
+    background-color: rgb(229, 230, 236);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.our-services img {
+    background-color: var(--main-color);
+    padding: 10px;
+    width: 40px;
+}
+
+.big-h3 {
+    font-weight: 500;
+}
+
+.our-services section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.our-services div {
+    margin: 20px
+}
+
+@media (min-width: 992px) {
+    .our-services section {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+/*FEATURED TOURS*/
+.featured-tours {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 10%;
+    box-sizing: border-box;
+}
+
+.featured-tours article>div>img {
+    width: 100%;
+    height: 400px;
+}
+
+.featured-tours div p img {
+    width: 20px;
+}
+
+.flex-trip {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin-bottom: 50px;
+}
+
+.featured-tours .trip {
+    box-shadow: 1px 1px 5px rgb(207, 207, 207);
+}
+
+.text-on-img {
+    position: absolute;
+    background-color: var(--main-color);
+    padding: 10px;
+}
+
+.featured-tours h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+@media (min-width: 992px) {
+    .trips {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .trip {
+        margin: 20px;
+        width: 250px;
+    }
+
+    .featured-tours article>div>img {
+        height: 200px;
+    }
+
+    .flex-trip {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/*GALLERY*/
+.gallery {
+    background-color: rgb(229, 230, 236);
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-bottom: 10px solid var(--main-color);
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .gallery-flex {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .gallery img {
+        height: 200px;
+    }
+}
+
+/*CONTACTS*/
+.contacts {
+    background-color: var(--main-color);
+    margin: 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+.contacts div h1 {
+    text-align: center;
+}
+
+.mail-submit {
+    display: flex;
+    background-color: white;
+    padding: 1px;
+    width: 300px;
+    justify-content: space-between;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.mail-submit input {
+    border: none;
+    padding-left: 10px;
+}
+
+.mail-submit button {
+    border: none;
+    padding: 0 20px;
+}
+
+.mail-submit button:hover {
+    border: 1px dotted var(--main-color);
+    background-color: rgb(214, 214, 214);
+}
+
+@media (min-width: 992px) {
+    .contacts {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .mail-submit {
+        width: 500px;
+    }
+}
+
+/*FOOTER*/
+.footer-section {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.footer-section nav a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.footer-section nav {
+    margin-bottom: 50px;
+}
+
+.footer-section nav a img {
+    width: 30px;
+}
