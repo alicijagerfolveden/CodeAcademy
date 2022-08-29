@@ -2,13 +2,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255, 255, 255);
     margin: 0;
+    width: 100%;
 }
 
 :root {
     --main-color: rgb(99, 99, 253);
 }
 
-/*HEADER*/
 header {
     display: flex;
     justify-content: space-between;
@@ -38,6 +38,7 @@ header a img {
 .nav-links {
     height: 0;
     overflow: hidden;
+    transition: var(--mainTransition);
 }
 
 @media (min-width: 992px) {
@@ -59,7 +60,6 @@ header a img {
 }
 
 
-/*CONTINUE EXPLORING*/
 main {
     background-color: var(--main-color);
     margin: 0;
@@ -83,7 +83,7 @@ main button:hover {
     transition-duration: 0.4s;
 }
 
-/*ABOUT US*/
+
 .about-us {
     text-align: center;
 }
@@ -111,9 +111,21 @@ main button:hover {
 @media (min-width: 992px) {
     .about-us-flex {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .about-us img {
+    .about-us div img {
+        width: 500px;
+        height: 300px;
+        margin: auto;
+        margin-left: 30px;
+        margin-top: 30px;
+
+    }
+
+    .about-us-border {
+        border: 6px solid var(--main-color);
         width: 500px;
         height: 300px;
         margin: auto;
@@ -122,7 +134,6 @@ main button:hover {
 }
 
 
-/*OUR SERVICES*/
 .our-services {
     background-color: rgb(229, 230, 236);
     text-align: center;
@@ -156,7 +167,7 @@ main button:hover {
     }
 }
 
-/*FEATURED TOURS*/
+
 .featured-tours {
     background-color: white;
     text-align: center;
@@ -217,7 +228,6 @@ main button:hover {
     }
 }
 
-/*GALLERY*/
 .gallery {
     background-color: rgb(229, 230, 236);
     text-align: center;
@@ -251,7 +261,6 @@ main button:hover {
     }
 }
 
-/*CONTACTS*/
 .contacts {
     background-color: var(--main-color);
     margin: 0;
@@ -272,7 +281,6 @@ main button:hover {
     display: flex;
     background-color: white;
     padding: 1px;
-    width: 300px;
     justify-content: space-between;
     height: 30px;
     margin-left: 50px;
@@ -293,6 +301,17 @@ main button:hover {
     background-color: rgb(214, 214, 214);
 }
 
+@media (max-width: 597px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts div p {
+        text-align: center;
+    }
+}
+
 @media (min-width: 992px) {
     .contacts {
         display: grid;
@@ -304,7 +323,7 @@ main button:hover {
     }
 }
 
-/*FOOTER*/
+
 .footer-section {
     background-color: black;
     color: white;
