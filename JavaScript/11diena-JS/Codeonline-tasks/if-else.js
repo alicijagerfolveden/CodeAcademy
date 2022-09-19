@@ -168,5 +168,3 @@ if (random === 3) {
 } else {
     alert("Jūs nieko nelaimėjote. Bandykite dar kartą.");
 }
-
-// pradėti nuo lesson 4 DOM manipuliavimo pagrindai
