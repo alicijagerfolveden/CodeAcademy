@@ -45,4 +45,20 @@ class Person {
 
 const p1 = new Person("Petras", 18);
 
-console.log(p1.compareAge());
+// console.log(p1.compareAge());
+
+const arrayOfEverything = [1, 5, "a", "g", "z", 6, "7"];
+
+const getOnlyNumbers = (array) => {
+  return array.filter((value) => typeof value === "number");
+};
+
+console.log(getOnlyNumbers(arrayOfEverything));
+
+const getDoubleStrings = (value) => {
+  return value
+    .split("")
+    .map((element) => (element.match(/[a-z]/i) ? element.repeat(2) : element))
+    .join("");
+};
+console.log(getDoubleStrings("Alicija 1997 24 Gerfolveden"));

@@ -3,11 +3,17 @@ function FullName(name, surname) {
   this.surname = surname;
   this.addToTable = function () {
     const nameColumn = document.createElement("td");
+
     nameColumn.textContent = this.name;
+
     const surnameColumn = document.createElement("td");
+
     surnameColumn.textContent = this.surname;
+
     const tr = document.createElement("tr");
+
     tr.append(nameColumn, surnameColumn);
+
     document.querySelector("table > tbody").append(tr);
   };
 }
