@@ -1,73 +1,36 @@
-// import { getRobots } from "./modules/getRobots.js";
-// import { createTable } from "./modules/createTable.js";
+import { getRobots } from "./modules/getRobots.js";
+import { createTable } from "./modules/createTable.js";
+import { renderTable } from "./modules/renderTable.js";
 
-const createTable = () => {
-  const newTable = document.createElement("table");
-  const tableRow = document.createElement("tr");
-  const tableHeadForID = document.createElement("th");
-  const tableHeadForImage = document.createElement("th");
-  const tableHeadForFirstName = document.createElement("th");
-  const tableHeadForLastName = document.createElement("th");
-  const tableHeadForCity = document.createElement("th");
-  const tableHeadForFavColor = document.createElement("th");
+const state = {};
 
-  tableHeadForID.innerHTML = "ID";
+const createCheckbox = () => {
+  const checkbox = document.createElement("input");
 
-  tableHeadForImage.innerHTML = "Image";
+  checkbox.setAttribute("type", "checkbox");
 
-  tableHeadForFirstName.innerHTML = "First name";
+  document.body.querySelector("#form").append(checkbox);
 
-  tableHeadForLastName.innerHTML = "Last name";
+  const checkboxLabel = document.createElement("label");
 
-  tableHeadForCity.innerHTML = "City";
+  checkboxLabel.innerText = "VIP";
 
-  tableHeadForFavColor.innerHTML = "Favorite color";
-
-  tableRow.append(
-    tableHeadForID,
-    tableHeadForImage,
-    tableHeadForFirstName,
-    tableHeadForLastName,
-    tableHeadForCity,
-    tableHeadForFavColor
-  );
-
-  newTable.append(tableRow);
-
-  document.body.append(newTable);
+  document.body.querySelector("#form").append(checkboxLabel);
 };
+
+createCheckbox();
 
 createTable();
+const checkboxIsVIP = document.querySelector("input[type=checkbox]");
 
-const renderTable = (robots) => {
-  const mainTable = document.querySelector("table");
-  const tableBody = document.createElement("tbody");
+checkboxIsVIP.addEventListener("change", () => {
+  renderTable(
+    checkboxIsVIP.checked
+      ? state.robots.filter((robot) => robot.vip)
+      : state.robots
+  );
+});
 
-  robots.forEach((element) => {
-    const tableRow = document.createElement("tr");
+const robots = await getRobots();
 
-    const id = document.createElement("td");
-
-    id.textContent = element.id;
-
-    mainTable.append(tableBody);
-
-    tableBody.append(tableRow);
-
-    tableRow.append(id);
-  });
-};
-
-const getRobots = async () => {
-  try {
-    const response = await fetch("https://magnetic-melon-yam.glitch.me");
-
-    const robots = await response.json();
-
-    renderTable(robots);
-    console.log(robots);
-  } catch (error) {
-    console.error(error);
-  }
-};
-await getRobots();
+renderTable(robots);
