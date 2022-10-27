@@ -1,23 +1,14 @@
-const getCars = async () => {
-  try {
-    const response = await fetch("https://robust-safe-crafter.glitch.me/");
+import { createTable } from "./modules/createTable.js";
+import { getCars } from "./modules/getCars.js";
+// import { deleteCar } from "./modules/deleteCar.js";
 
-    const cars = await response.json();
+const cars = await getCars();
 
-    console.log(cars);
-    return cars;
-  } catch (error) {
-    console.error(error);
-  }
-};
+// const onCarDelete = (deletedId) => {
+//   console.log(products);
+//   products = products.filter((product) => product.id !== deletedId);
 
-getCars();
+//   renderProducts(products);
+// };
 
-// try {
-//     const response = await fetch(
-//       `https://jsonplaceholder.typicode.com/posts/${postNumber}`,
-//       { method: "GET" } // šio objekto nebūtina pridėti, GET yra default
-//     );
-//     const post = await response.json();
-
-//     return post;
+createTable(cars);
