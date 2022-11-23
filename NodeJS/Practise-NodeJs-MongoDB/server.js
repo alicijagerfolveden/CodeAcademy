@@ -45,4 +45,36 @@ app.post("/", async (req, res) => {
   }
 });
 
+app.get("/orders", async (req, res) => {
+  try {
+    const connection = await client.connect();
+    const data = await connection
+      .db(DB)
+      .collection(DBCOLLECTION)
+      .find()
+      .sort({ orderPlacedDate: 1 })
+      .toArray();
+    await connection.close();
+    return res.send(data);
+  } catch (err) {
+    res.status(500).send({ err });
+  }
+});
+
+app.get("/:product", async (req, res) => {
+  try {
+    const { product } = req.params;
+    const connection = await client.connect();
+    const data = await connection
+      .db(DB)
+      .collection(DBCOLLECTION)
+      .find({ products: product })
+      .toArray();
+    await connection.close();
+    return res.send(data);
+  } catch (err) {
+    res.status(500).send({ err });
+  }
+});
+
 app.listen(PORT, () => console.log(`Server is running on ${PORT} port`));
