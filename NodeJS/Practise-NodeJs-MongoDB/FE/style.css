@@ -1,0 +1,165 @@
+:root {
+  --background-color: rgb(222, 239, 243);
+  --white-color: white;
+  --box-shadow-color: rgb(170, 170, 170);
+  --non-active-font-color: rgb(180, 178, 178);
+  --active-button-color: rgb(69, 101, 229);
+  --hover-color: rgb(16, 16, 169);
+}
+
+body {
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--white-color);
+  padding-top: 80px;
+  padding-bottom: 20px;
+  box-shadow: 1px 1px 2px var(--box-shadow-color);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  max-width: 300px;
+  margin: auto;
+}
+
+.header-nav a {
+  font-weight: bold;
+  text-decoration: none;
+}
+.active-nav {
+  color: var(--active-button-color);
+}
+
+.not-active-nav {
+  color: var(--non-active-font-color);
+}
+
+.blue-button {
+  color: var(--white-color);
+  background-color: var(--active-button-color);
+  border: 1px solid var(--active-button-color);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.blue-button:hover {
+  background-color: rgb(16, 16, 169);
+  border: 2px solid rgb(16, 16, 169);
+}
+
+.cancel-button {
+  color: black;
+  background-color: var(--white-color);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cancel-button:hover {
+    color: var(--hover-color);
+}
+
+main {
+  margin: 3% 10%;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.memberships-box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  padding-top: 50px;
+}
+
+.membership-box {
+  background-color: var(--white-color);
+  box-shadow: 1px 1px 2px var(--box-shadow-color);
+  max-height: 250px;
+  min-height: 210px;
+  text-align: right;
+  padding-top: 20px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.membership-box .delete-button {
+  text-align: right;
+}
+
+.membership-name-price {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.membership-description {
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--non-active-font-color);
+  text-align: center;
+}
+
+.delete-button {
+  background-color: rgb(253, 236, 236);
+  padding: 5px;
+  border: 2px solid rgb(251, 215, 215);
+}
+
+.delete-button:hover {
+  background-color: rgb(251, 215, 215);
+}
+
+.membership-form {
+  background-color: var(--white-color);
+  box-shadow: 1px 1px 2px var(--box-shadow-color);
+  padding: 50px;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.membership-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.membership-form li {
+  text-align: center;
+  padding: 15px;
+}
+
+.membership-form label {
+  display: inline-block;
+  font-weight: bold;
+  width: 200px;
+  text-align: right;
+  padding-right: 20px;
+}
+.membership-form input {
+  height: 30px;
+}
+.membership-form input,
+textarea {
+  width: 500px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 1px 1px 2px var(--box-shadow-color);
+}

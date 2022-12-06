@@ -14,7 +14,7 @@ const client = new MongoClient(URI);
 
 app.use(express.json());
 app.use(cors());
-
+// copy-paste project, work with it
 app.get("/", async (_, res) => {
   try {
     const connection = await client.connect();
