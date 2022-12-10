@@ -89,6 +89,22 @@ footer {
   padding-top: 50px;
 }
 
+@media (max-width: 1235px) {
+  .memberships-box {
+grid-template-columns: auto auto;
+align-items: center;
+margin: auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .memberships-box {
+grid-template-columns: auto;
+align-items: center;
+margin: auto;
+  }
+}
+
 .membership-box {
   background-color: var(--white-color);
   box-shadow: 1px 1px 2px var(--box-shadow-color);
@@ -126,7 +142,7 @@ footer {
   background-color: rgb(251, 215, 215);
 }
 
-.membership-form {
+.membership-form, .user-form {
   background-color: var(--white-color);
   box-shadow: 1px 1px 2px var(--box-shadow-color);
   padding: 50px;
@@ -135,31 +151,56 @@ footer {
   height: 400px;
 }
 
-.membership-form ul {
+.membership-form ul, .user-form ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.membership-form li {
+.membership-form li, .user-form li {
   text-align: center;
   padding: 15px;
 }
 
-.membership-form label {
+.membership-form label, .user-form label {
   display: inline-block;
   font-weight: bold;
   width: 200px;
   text-align: right;
   padding-right: 20px;
 }
-.membership-form input {
+.membership-form input, .user-form input, .user-form select {
   height: 30px;
 }
 .membership-form input,
-textarea {
+textarea, .user-form input, .user-form select {
   width: 500px;
   box-sizing: border-box;
   border: none;
   box-shadow: 1px 1px 2px var(--box-shadow-color);
+}
+
+#sort-users-button {
+  border: none;
+  background-color: var(--background-color);
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+ margin: auto;
+align-items: center;
+}
+
+.user-name-price {
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+
+.user-description {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.user-input {
+  color: blue;
 }

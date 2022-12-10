@@ -18,10 +18,42 @@
       <section>
         <h1>Create User</h1>
    </section>
-        <article></article>
+   <article>
+    <div>
+      <form class="user-form" id="newUserForm">
+        <ul>
+          <li>
+            <label for="first-name">First Name</label>
+            <input name="first-name" id="user-first-name" placeholder="First Name" required />
+          </li>
+          <li>
+            <label for="last-name">Last Name</label>
+            <input name="last-name" id="user-last-name" placeholder="Last Name" required />
+          </li>
+          <li>
+            <label for="email" >Email Address</label>
+           <input
+              name="email"
+              type="email" id="user-email" required
+              placeholder="Email Address"
+            />
+          </li>
+          <li>
+            <label for="membership">Change Membership</label>
+           <select name="membership" id="user-membership">
+              </select>
+          </li>
+          <li>
+            <a href="./users.html" class="cancel-button">Cancel</a>
+            <button class="blue-button" type="submit" id="formSubmitButton">New Membership</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </article>
     </main>
     <footer>Copyright ©2021 Membership Manager</footer>
 
-    <script src="./memberships.js"></script>
+    <script type="module" src="./new-user.js"></script>
 </body>
 </html>
