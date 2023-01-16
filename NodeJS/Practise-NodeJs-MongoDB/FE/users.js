@@ -8,6 +8,8 @@ const getUsersAsc = async () => {
   showUsers(users);
 };
 
+//pasikurti funkciją kuri gauna rykiuotus vartotojus ir grąžina juos.
+
 const getUsersDsc = async () => {
   const request = await fetch("http://localhost:5000/users/dsc");
 
@@ -61,6 +63,6 @@ const showUsers = (value) => {
   usersSection.append(usersBox);
 };
 
-sortUsers.addEventListener("click", await getUsersDsc());
+// sortUsers.addEventListener("click", await getUsersDsc());
 
 const users = await getUsersAsc();

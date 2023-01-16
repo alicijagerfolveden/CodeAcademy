@@ -166,6 +166,8 @@ app.delete("/memberships/:id", async (req, res) => {
 app.get("/users/:order", async (req, res) => {
   const { order } = req.params;
 
+  console.log(order);
+
   if (order === "asc") {
     try {
       const connection = await client.connect();
