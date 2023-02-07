@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Form } from "./components/Form";
 import { NoteForm } from "./components/NoteForm";
+import { RandomNumberGenerator } from "./components/RandomNumberGenerator";
+import { FirstComponent } from "./components/FirstComponent";
 
 function App() {
   return (
@@ -15,10 +17,12 @@ function App() {
       <main>
         {/* <Form /> */}
 
-        <NoteForm>
+        {/* <NoteForm>
           <h1>Notes App</h1>
           <h2>Welcome</h2>
-        </NoteForm>
+        </NoteForm> */}
+        <RandomNumberGenerator />
+        <FirstComponent />
       </main>
     </div>
   );
