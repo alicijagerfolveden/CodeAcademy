@@ -37,6 +37,7 @@ export const FooterStyle = styled.div`
   color: gray;
   align-items: center;
   padding-top: 30px;
+  margin-bottom: 20px;
 `;
 
 export const OrangeButtonStyle = styled.button`
@@ -96,5 +97,41 @@ export const PetsBoxStyle = styled.div`
   p:first-child {
     font-size: 25px;
     margin-bottom: 30px;
+  }
+`;
+
+export const FormStyling = styled.div`
+  form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 300px;
+      border-color: gray;
+      padding: 5px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+    }
+  }
+`;
+
+export const MedsTableStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  table {
+    border-collapse: collapse;
+  }
+  table td,
+  th,
+  tr {
+    border: 1px solid orangered;
+    width: 200px;
+
+    :hover {
+      background-color: orange;
+    }
   }
 `;

@@ -13,7 +13,8 @@ export const PetList = () => {
   return (
     <>
       <TitleComponent>
-        <h1>Pet List</h1> <OrangeButton text="Add Pet" onPress={handleClick} />
+        <h1>Pet List</h1>
+        <OrangeButton text="Add Pet" type="button" onPress={handleClick} />
       </TitleComponent>
       <PetsBox />
     </>

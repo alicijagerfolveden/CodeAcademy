@@ -32,7 +32,7 @@ export const PetsBox = () => {
   };
 
   const deletePet = (id: number, name: string) => {
-    const isConfirmed = window.confirm(`Do you want to delete pet ID ${name}?`);
+    const isConfirmed = window.confirm(`Do you want to delete pet ${name}?`);
 
     if (isConfirmed) {
       axios
@@ -57,10 +57,12 @@ export const PetsBox = () => {
                   <p>{value.client_email}</p>
                   <OrangeButton
                     text="View log"
+                    type="button"
                     onPress={() => handleClickViewLog(value.id)}
                   />
                   <WhiteButton
                     text="Delete"
+                    type="button"
                     onPress={() => deletePet(value.id, value.name)}
                   />
                 </PetsBoxStyle>

@@ -1,6 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { PetList } from "./PetList";
 import { NotFoundPage } from "./NotFoundPage";
+import { AddPet } from "./AddPet";
+import { Meds } from "./Meds";
+import { AddMedications } from "./AddMedications";
 
 export const MainRouter = () => {
   return (
@@ -8,11 +11,11 @@ export const MainRouter = () => {
       <Routes>
         <Route path="/" element={<PetList />} />
         <Route path="/health-log/:id" element={<p>Health Log</p>} />
-        <Route path="/medications" element={<p>View medications</p>} />
-        <Route path="/add-pet" element={<p>Add pet</p>} />
+        <Route path="/medications" element={<Meds />} />
+        <Route path="/add-pet" element={<AddPet />} />
         <Route path="/add-prescription" element={<p>Add Prescription</p>} />
         <Route path="/add-log" element={<p>Add Log</p>} />
-        <Route path="/add-medications" element={<p>Add Medications</p>} />
+        <Route path="/add-medication" element={<AddMedications />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
