@@ -1,12 +1,15 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ProductsContext } from "../ProductsContext/ProductsContext";
 import { WhiteButton } from "../small-components/Button";
 import { TitleComponent } from "../small-components/TitleComponent";
 import { FormStyling } from "./StyledComponents";
 
-//todo: neveikia POST
-
 export const AddPet = () => {
+  const products = useContext(ProductsContext);
+
+  // console.log(products); setContext hook
+
   const [name, setName] = useState("");
   const [dob, setDob] = useState("2000-01-01");
   const [email, setEmail] = useState("");
@@ -36,6 +39,7 @@ export const AddPet = () => {
 
     axios
       .post("https://glittery-dull-snickerdoodle.glitch.me/v1/pets/", inputData)
+      .then((data) => console.log(data))
       .catch((error) => console.error(error));
   };
 
