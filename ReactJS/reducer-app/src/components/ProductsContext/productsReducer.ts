@@ -29,9 +29,29 @@ export const productsReducer = (
       };
     }
 
-    case "removeProduct":
-      console.log("remove Product");
-      break;
+    case "removeProduct": {
+      const productToRemove = state.cartProducts.find(
+        (product) => product.id === action.payload.productId
+      );
+
+      if (!productToRemove) {
+        return state;
+      }
+
+      const newCartProducts = [...state.cartProducts].filter((cartProduct) => {
+        if (cartProduct.id === action.payload.productId) {
+          cartProduct.amount--;
+
+          return cartProduct.amount > 0;
+        }
+        return true;
+      });
+
+      return {
+        ...state,
+        cartProducts: newCartProducts,
+      };
+    }
 
     case "setProducts": {
       const { fetchedProducts } = action.payload;
