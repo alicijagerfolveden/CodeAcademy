@@ -1,3 +1,4 @@
+import { Fade } from "@mui/material";
 import { useReducer } from "react";
 import { ProductsContext, MainRouter, productsReducer } from "./components";
 
@@ -8,10 +9,12 @@ export const App = () => {
   });
 
   return (
-    <div>
-      <ProductsContext.Provider value={{ ...state, dispatch }}>
-        <MainRouter />
-      </ProductsContext.Provider>
-    </div>
+    <Fade in>
+      <div>
+        <ProductsContext.Provider value={{ ...state, dispatch }}>
+          <MainRouter />
+        </ProductsContext.Provider>
+      </div>
+    </Fade>
   );
 };

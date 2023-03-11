@@ -14,13 +14,16 @@ export const productsReducer = (
         return state;
       }
 
-      const cartProduct = state.cartProducts.find(
+      const cartProductIndex = state.cartProducts.findIndex(
         (product) => product.id === action.payload.productId
       );
 
-      if (cartProduct) {
-        cartProduct.amount++;
-        return state;
+      if (cartProductIndex !== -1) {
+        const newCartProducts = [...state.cartProducts];
+
+        newCartProducts[cartProductIndex].amount++;
+
+        return { ...state, cartProducts: newCartProducts };
       }
 
       return {
@@ -65,7 +68,6 @@ export const productsReducer = (
 
     default:
       console.log("no case matched");
-      break;
   }
   return state;
 };

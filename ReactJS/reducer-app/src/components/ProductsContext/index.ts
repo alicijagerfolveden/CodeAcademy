@@ -1,2 +1,2 @@
-export {ProductsContext} from './ProductsContext'
-export {productsReducer} from './productsReducer'
+export { ProductsContext } from "./ProductsContext";
+export { productsReducer } from "./productsReducer";
